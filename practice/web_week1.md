@@ -50,7 +50,7 @@ When you print the value of the new variable we can see we left out backslash se
 
 # Download file
 Python uses modules to add functionality that other people have written code for.
-Each module is basically a script with functions inside that take specified variables to do something.
+Each module is basically a script with functions inside that take specified variables to do something. We will revisit functions and modules in more detail later.
 A module can be imported using import <module name>:
 
 ```python
@@ -60,21 +60,21 @@ A module can be imported using import <module name>:
     import urllib
 ```
 
-The os module gives us operating system based functions. When we were declaring our fullFileName, if we didn't know the expected seperators were "\\" we could have used the sep function in the os module:
+The os module gives us operating system based functions. When we were declaring our fullFileName, if we didn't know the expected seperators were `"\\"` we could have used the sep function in the os module:
 
     fullFileName = filePath + os.sep + fileName
   
 The arcpy module allows us to use arcGIS functionality outside of arcGIS desktop. In the python window of arcMap this module is already imported.
 
 The urllib module is one of the packages for using urls. There are several that can be used depending on your specific needs and instal.
-Once we've imported urllib we can use functions based on the module they are in using dot notation:
+Once urllib is imported the functions inside can be accessed using the module they are in and dot notation:
 
 ```python
     import urllib
     urllib.urlretrieve()
 ```
 
-The function urlretrieve() performs some function on the variables we put in (). When a function isn't given the variables (aka arguments) that it expects you should get an error. The urlretrieve() function expects at least 1 argument and so you get an error like:
+The function urlretrieve() performs some function on the variables we put in (). When a function isn't given the variables (aka arguments) that it expects you should get an error. The urlretrieve() function expects at least 1 argument and so you get an error:
 
 >```python
 >Traceback (most recent call last):
@@ -84,25 +84,25 @@ The function urlretrieve() performs some function on the variables we put in ().
 >```
 
 How do we know what argument the function wants? Google the module.function to find the documentation that will tell what the variables should be (The first [hit](https://docs.python.org/2/library/urllib.html) should the documentation for the python standard library).
-The python documentation can be jargony, scroll down to urllib.**urlretrieve**(url'[, filename[, reporthook[,data]]]) and we see the first argument is the url. We know from the error we got that the function only requires 1 argument, the url. In the documentation we see it will also take additional arguments such as filename. Reading the documentation:
+The python documentation can be jargony, scroll down to urllib.**urlretrieve**(url[, filename[, reporthook[,data]]]) and we see the first argument is the url. We know from the error we got that the function only requires 1 argument, and now we see it is the url. In the documentation we see it will also take additional arguments such as filename:
 
 > The second argument, if present, specifies the file location to copy to (if absent, the location will be a tempfile with a generated name).
 
 It looks like it wants (url, filename) as the variables:
-    urlretrieve(url, fullFileName)
+
+    urllib.urlretrieve(url, fullFileName)
 
 Go see if it worked!
 
 # Additional things to try
-In the example above we had to know what function within the urllib we wanted and what arguments it expected. Depending on the IDE you are using there may be helpful resources for this. 
+In the example above the name of the function within the urllib module and what arguments it expected had to be known. Depending on the IDE you are using there may be helpful resources for this. 
 Try importing urllib from the python window in arcMap:
 
 ```python
     import urllib
 ```
 
-As you type the interface will try to autocomplete for you. If you typr urllib. it will start suggesting functions within that library.
-When you type out the funciton it will show you the syntax:
+As you type the interface will try to autocomplete for you. If you type urllib. it will start suggesting functions within that library.
 
     urlib.u
 
@@ -117,7 +117,9 @@ It takes time for python to import an entire library, so if we are only using a 
     from urllib import urlretrieve
 ```
 
+Now the function is accessible outside of the module:
 
+    urlretrieve(url, fullFileName)
 
 
   
