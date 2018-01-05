@@ -76,12 +76,12 @@ Once we've imported urllib we can use functions based on the module they are in 
 
 The function urlretrieve() performs some function on the variables we put in (). When a function isn't given the variables (aka arguments) that it expects you should get an error. The urlretrieve() function expects at least 1 argument and so you get an error like:
 
-```python
-Traceback (most recent call last):
-  File "<pyshell#37>", line 1, in <module>
-    urllib.urlretrieve()
-TypeError: urlretrieve() takes at least 1 argument (0 given)
-```
+>```python
+>Traceback (most recent call last):
+>  File "<pyshell#37>", line 1, in <module>
+>    urllib.urlretrieve()
+>TypeError: urlretrieve() takes at least 1 argument (0 given)
+>```
 
 How do we know what argument the function wants? Google the module.function to find the documentation that will tell what the variables should be (The first [hit](https://docs.python.org/2/library/urllib.html) should the documentation for the python standard library).
 The python documentation can be jargony, scroll down to urllib.**urlretrieve**(url'[, filename[, reporthook[,data]]]) and we see the first argument is the url. We know from the error we got that the function only requires 1 argument, the url. In the documentation we see it will also take additional arguments such as filename. Reading the documentation:
