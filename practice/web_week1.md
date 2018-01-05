@@ -93,18 +93,31 @@ It looks like it wants (url, filename) as the variables:
 
 Go see if it worked!
 
+# Additional things to try
+In the example above we had to know what function within the urllib we wanted and what arguments it expected. Depending on the IDE you are using there may be helpful resources for this. 
+Try importing urllib from the python window in arcMap:
+
+```python
+    import urllib
+```
+
+As you type the interface will try to autocomplete for you. If you typr urllib. it will start suggesting functions within that library.
+When you type out the funciton it will show you the syntax:
+
+    urlib.u
+
+> urllib.urlretrieve
+
+Likewise, once you out the function the IDE may be able to show you the expected syntax:
+
+> urllib.urlretrieve(url, filename=None, reporthook=None, data=None)
 
 It takes time for python to import an entire library, so if we are only using a couple known functions we can choose to only import those:
 ```python
     from urllib import urlretrieve
 ```
 
-Try importing urllib from the python window in arcMap:
-    import urllib
-As you type the interface will try to autocomplete for you. If you typr urllib. it will start suggesting functions within that library.
-When you type out the funciton it will show you the syntax:
-    urlib.urlretrieve(
-urllib.urlretrieve(url, filename=None, reporthook=None, data=None)
+
 
 
   
