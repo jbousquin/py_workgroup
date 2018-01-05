@@ -3,7 +3,7 @@ This repository conatins materials for the workgroup to use while learning pytho
 
 The purpose of this group is to work together to learn new skills, languages, data science practices, etc. as they relate to our research in environmental science. The primary focus will be the use of python, with excercises focused on accessing data from the web and manipulating spatial data in arcGIS desktop using arcpy. However, topics are not limited to these and you're encouraged to bring ideas and tools from other topics or languages.
 
-# GitHub and this Repository
+# GitHub and this repository
 This repository is public and thus anyone can access the files; however, only collaborators on the repository can add or edit files. I encourage everyone to sign up for a GitHub account, they are free and you will be able to take advantage of our issues for discussions and you can be added as a collaborator on the repository.
 
 | Folder/File   | Description  |
