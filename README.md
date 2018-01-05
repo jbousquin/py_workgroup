@@ -8,8 +8,9 @@ This repository is public and thus anyone can access the files; however, only co
 
 | Folder/File   | Description  |
 | ------------- |-------------------------------------------: |
-| slides        | Contains slides covering each weeks lesson. |
 | practice      | Contains code, data etc. to apply skills.   |
+| slides        | Contains slides covering each weeks lesson. |
+| CONDUCT.md    | Code of conduct - from Data Carpentry       |
 | README.md     | This document, provides basic information.  |
 
 # Repository Structure
@@ -19,10 +20,11 @@ To keep things neat and tiddy we will impose some structures and best practices.
 # File naming conventions
 So that it is easier for us to find materials and keep things looking orderly, we will follow these rules for naming files in the notes and meetings sections:
 
-Only use lower case (with the exception of the files listed above).
-No spaces are allowed in file names.
-Start out the name with something descriptive followed by the date with year, month, day separated by underscore.
-Use conventions for file extensions (e.g. .md for markdown, .R for R script, .py for python etc.).
+1. Only use lower case (with the exception of the files listed above).
+2. No spaces are allowed in file names.
+3. Start out the name with something descriptive followed by the date with year, month, day separated by underscore.
+4. Use conventions for file extensions (e.g. .md for markdown, .R for R script, .py for python etc.).
+
 For example, copy_feature_example_2018_01_11.py would be a good file name.
 
 # Questions
