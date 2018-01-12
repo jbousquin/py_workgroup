@@ -13,12 +13,14 @@ But lets do it using lists in python:
 
 from utils import field_to_list
 
-field1 = ""
-field2 = ""
-layer = ""
+field1 = "B01003_1E"
+field2 = "HD01_VD01"
+# Note you'll need to specify your copy of the repo instead of ~
+# If in arc you can drag and drop the layer (careful of selections)
+shp = r"~\py_workgroup\practice\data\QC_data.shp"
 
-list_1 = field_to_list(layer, field1)
-list_2 = field_to_list(layer, field2)
+list_1 = field_to_list(shp, field1)
+list_2 = field_to_list(shp, field2)
 ```
 
 Now I could loop through and do math to find only points that are different:
@@ -30,25 +32,93 @@ diff_list = []
 i = 0
 for val in list_1:
   if val != list_2[i]:
-    diff_list.append(val - list_2[i])
+    diff_list.append(float(val) - float(list_2[i]))
   i = i + 1
 ```
 
-Though that difference doesn't mean much without the ID of the feature:
+These fields are text fields, so we get an error the first time one of them is non-numeric:
+
+```python
+Runtime error 
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+ValueError: could not convert string to float: 
+```
+
+We dig can dig in to find that this string value is null u' '. There are a few ways we could handle this, but let's try just catching those nulls and saving them to the list as such:
+
+```python
+diff_list = []
+i = 0
+for val in list_1:
+  if val != list_2[i]:
+    if val == " ":
+      diff_list.append("<null>")
+    else:
+      diff_list.append(float(val) - float(list_2[i]))
+  i = i + 1
+```
+Well now we have a list of 314 instances where the columns don't match. How many of those are because of the null?
+
+```python
+not_null_list = []
+for x in diff_list:
+  if x != "<null>":
+    not_null_list.append(x)
+```
+
+Alright, so the differences all have null for the first column. If we want to explore them more or fix it we really need to know the feature ID:
 
 ```python
 field3 = "FID"
-list_3 = field_to_list(layer, field3)
+list_3 = field_to_list(shp, field3)
 
-# make list to hold differences
 diff_list = []
 ID_list = [] # List to hold ID
 i = 0
 for val in list_1:
   if val != list_2[i]:
-    diff_list.append(val - list_2[i])
     ID_list.append(list_3[i])
-  i + 1
+    if val == " ":
+      diff_list.append("<null>")
+    else:
+      diff_list.append(val - list_2[i])
+  i = i + 1
+```
+
+Now we have a list we can use to further explore those errors and try to find out why they might have happend.
+
+## Make layer selection using list
+We have a ID_list with all features that don't equal. We could go through one by one, but let's say we want to explore it with a selection in arcmap.
+
+First we have to make sure we have a layer, as selections are temporary and can only be made on a layer not a shapefile:
+
+```python
+arcpy.MakeFeatureLayer_management(shp, "temp_layer")
+```
+
+Next we'll construct a where_clause concatenating each ID in our list just like the one you use in select by attribute:
+
+```python
+where_clause = '' # empty string
+for ID in ID_list:
+  query = field3 + ' = ' + str(ID) + " OR "
+  where_clause = where_clause + query
+```
+
+Sometimes query strings can be tricky, so I'd encourage you to test it in select by attribute for the first ID:
+
+```python
+ID = ID_list[0]
+query = field3 + ' = ' + str(ID) + " OR "
+print query
+```
+
+Using that we see we'll need to remove the last " OR ", but otherwise it seems to work. We'll add that and then use it to make the selection:
+
+```
+where_clause = where_clause[:-4]
+arcpy.SelectLayerByAttribute_management("temp_layer", "NEW_SELECTION", where_clause)
 ```
 
 ## Delete multiple fields
