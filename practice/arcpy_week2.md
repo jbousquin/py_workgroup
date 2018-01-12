@@ -51,3 +51,5 @@ for val in list_1:
   i + 1
 ```
 
+## Delete multiple fields
+Ever have a huge table and you only care about a couple fields, but all the extras make it hard to work with? Clicking each one and deleting is a pain. Well we can make a list of the fields, subset it with the names we want to keep and then loop over the ones we want to delete.
