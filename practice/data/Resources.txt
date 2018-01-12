@@ -1,2 +1,24 @@
 Federal GIS Servers (rather incomplete):
 https://mappingsupport.com/p/surf_gis/list-federal-GIS-servers.pdf
+
+
+How to find IDLE on your machine:
+IDLE comes with the standard install of python. Depending on where python is installed on your machine the shortcut to it may be in different places. Mine was installed with arc 10.3 so it was:
+C:\Python27\ArcGIS10.3\Lib\idlelib\idle.pyw
+
+If I want to run python from command line instead of IDLE:
+C:\Python27\ArcGIS10.3\python.exe
+
+If you don’t know where it is you can create a python file by changing the extension on a text file (.txt) to .py then right click and “Edit with IDLE”
+
+
+Forward slash vs backslash:
+I briefly addressed file paths yesterday and since had a great question about using forward slashes “/” instead of the backslash “\” (I’d never tried).
+
+https://imgs.xkcd.com/comics/backslashes.png
+
+Unix uses forward slashes, and although Windows uses mainly backslashes it will usually accept either (Stack explanation of why). The catch is that not all software written for windows will always accept / (arc & QGIS seem to). Using os.sep from the os module is the safest solution. If you’re using “/” but concerned, os.path.normpath() can be used to normalize the pathname by collapsing redundant separators or on windows converting / to \. Using a raw string is my go to since that lets me copy it directly (apparently common). As to the “There should be one-- and preferably only one --obvious way to do it.” – don’t hardcode paths, make your user supply it or derive it using the os module.
+
+
+
+
