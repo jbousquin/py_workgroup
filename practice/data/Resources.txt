@@ -1,5 +1,7 @@
 Federal GIS Servers (rather incomplete):
 https://mappingsupport.com/p/surf_gis/list-federal-GIS-servers.pdf
+State GIS resources
+https://mappingsupport.com/p/surf_gis/list-state-GIS-servers.pdf
 
 
 How to find IDLE on your machine:
@@ -9,15 +11,15 @@ C:\Python27\ArcGIS10.3\Lib\idlelib\idle.pyw
 If I want to run python from command line instead of IDLE:
 C:\Python27\ArcGIS10.3\python.exe
 
-If you donít know where it is you can create a python file by changing the extension on a text file (.txt) to .py then right click and ìEdit with IDLEî
+If you don‚Äôt know where it is you can create a python file by changing the extension on a text file (.txt) to .py then right click and ‚ÄúEdit with IDLE‚Äù
 
 
 Forward slash vs backslash:
-I briefly addressed file paths yesterday and since had a great question about using forward slashes ì/î instead of the backslash ì\î (Iíd never tried).
+I briefly addressed file paths yesterday and since had a great question about using forward slashes ‚Äú/‚Äù instead of the backslash ‚Äú\‚Äù (I‚Äôd never tried).
 
 https://imgs.xkcd.com/comics/backslashes.png
 
-Unix uses forward slashes, and although Windows uses mainly backslashes it will usually accept either (Stack explanation of why). The catch is that not all software written for windows will always accept / (arc & QGIS seem to). Using os.sep from the os module is the safest solution. If youíre using ì/î but concerned, os.path.normpath() can be used to normalize the pathname by collapsing redundant separators or on windows converting / to \. Using a raw string is my go to since that lets me copy it directly (apparently common). As to the ìThere should be one-- and preferably only one --obvious way to do it.î ñ donít hardcode paths, make your user supply it or derive it using the os module.
+Unix uses forward slashes, and although Windows uses mainly backslashes it will usually accept either (Stack explanation of why). The catch is that not all software written for windows will always accept / (arc & QGIS seem to). Using os.sep from the os module is the safest solution. If you‚Äôre using ‚Äú/‚Äù but concerned, os.path.normpath() can be used to normalize the pathname by collapsing redundant separators or on windows converting / to \. Using a raw string is my go to since that lets me copy it directly (apparently common). As to the ‚ÄúThere should be one-- and preferably only one --obvious way to do it.‚Äù ‚Äì don‚Äôt hardcode paths, make your user supply it or derive it using the os module.
 
 
 
