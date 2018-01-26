@@ -120,37 +120,3 @@ Using that we see we'll need to remove the last " OR ", but otherwise it seems t
 where_clause = where_clause[:-4]
 arcpy.SelectLayerByAttribute_management("temp_layer", "NEW_SELECTION", where_clause)
 ```
-
-## Delete multiple fields
-Ever have a huge table and you only care about a couple fields, but all the extras make it hard to work with? Clicking each one and deleting is a pain. Well we can make a list of the fields, subset it with the names we want to keep and then loop over the ones we want to delete.
-
-First we need our list of fields to delete. arpyc.ListFields() returns a list of field "objects" where each object have attributes accessed using dot notation. We're interested in .name
-
-```python
-# Create a list for field names
-fields_list = [x.name for x in arcpy.ListFields(lyr)]
-
-# Long version
-fields_list = []
-for x in arcpy.ListFields(lyr):
-  fields_list.append(x.name)
-```
-
-Now we want to make a list of the fields to keep, and for any field in fields_list not in our keep_list we'll add it to a delete_list
-
-```python
-keep_list = ['FID', 'Shape', 'GEOID10', 'B01003_1E', 'B01003_1M', 'HD01_VD01', 'HD02_VD01']
-delete_list = [field for field in fields_list if field not in keep_list]
-# Long version
-delete_list = []
-for field in fields_list:
-  if field not in keep_list:
-    delete_list.append(field)
-```
-
-And now we loop over our delete_list, deleting each field
-
-```python
-for field in delete_list:
-  arcpy.DeleteField_management(lyr, field)
-```
