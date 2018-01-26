@@ -100,7 +100,8 @@ type(dict1.values())
 
 ### New data types set() and tuple()
 If you look at each item in a dict.items() list, you may notice an unfamiliar data type  
-(a, b). These are [tuples](https://www.tutorialspoint.com/python/python_tuples.htm). Tuples are like lists except they are immutable,   meaning you can't update the value of elements in place like with a list:
+(a, b). These are [tuples](https://www.tutorialspoint.com/python/python_tuples.htm). Tuples are like lists except they are immutable,   
+meaning you can't update the value of elements in place like with a list:
 
 ```python
 var = "a", "b"
