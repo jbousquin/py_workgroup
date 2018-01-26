@@ -12,7 +12,7 @@ contents_list = os.listdir(my_path)
 
 On inspection we see this lists everything in the folder, files and sub-folders.
 
-Next we will filter out just the files using [os.path.isfile](https://docs.python.org/2/library/os.path.html) and [os.path.join](https://docs.python.org/2/library/os.path.html).
+Next we will filter out just the files using [os.path.isfile](https://docs.python.org/2/library/os.path.html) and [os.path.join](https://docs.python.org/2/library/os.path.html).  
 os.path.join is being used to get the full filename and path to pass to os.path.isfile to test:
 
 ```python
