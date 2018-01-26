@@ -1,10 +1,10 @@
-Federal GIS Servers (rather incomplete):
+### Federal GIS Servers (rather incomplete):
 https://mappingsupport.com/p/surf_gis/list-federal-GIS-servers.pdf
-State GIS resources
+### State GIS resources
 https://mappingsupport.com/p/surf_gis/list-state-GIS-servers.pdf
 
 
-How to find IDLE on your machine:
+### How to find IDLE on your machine:
 IDLE comes with the standard install of python. Depending on where python is installed on your machine the shortcut to it may be in different places. Mine was installed with arc 10.3 so it was:
 C:\Python27\ArcGIS10.3\Lib\idlelib\idle.pyw
 
@@ -14,13 +14,28 @@ C:\Python27\ArcGIS10.3\python.exe
 If you don’t know where it is you can create a python file by changing the extension on a text file (.txt) to .py then right click and “Edit with IDLE”
 
 
-Forward slash vs backslash:
+### Forward slash vs backslash:
 I briefly addressed file paths yesterday and since had a great question about using forward slashes “/” instead of the backslash “\” (I’d never tried).
 
 https://imgs.xkcd.com/comics/backslashes.png
 
 Unix uses forward slashes, and although Windows uses mainly backslashes it will usually accept either (Stack explanation of why). The catch is that not all software written for windows will always accept / (arc & QGIS seem to). Using os.sep from the os module is the safest solution. If you’re using “/” but concerned, os.path.normpath() can be used to normalize the pathname by collapsing redundant separators or on windows converting / to \. Using a raw string is my go to since that lets me copy it directly (apparently common). As to the “There should be one-- and preferably only one --obvious way to do it.” – don’t hardcode paths, make your user supply it or derive it using the os module.
 
+### Resources for learning python
+•	Collection of Python books and documents contributed by EPA Python users:  https://usepa.sharepoint.com/sites/oei_Work/edapservicecenter/Shared%20Documents/PythonBooks?csf=1
+•	Python courses on EPA's Skillport site:  https://epa.skillport.com/skillportfe/main.action#browse/c739e936-2e2d-47c2-b5c8-c4a3e6e635fb 
+•	"Learn Python The Hard Way" https://learnpythonthehardway.org/
+•	Learn Python: https://www.learnpython.org/
+•	Hackerrank Python Tutorials: https://www.hackerrank.com/python-tutorial
+•	Code Academy Intro to Python Course:  https://www.codecademy.com/learn/learn-python
 
 
+### Learning Python for Data Science
+•	Python for Data Science on EPA's Skillport site:  https://epa.skillport.com/skillportfe/main.action#browse/ee90310a-0f07-4274-95e5-5c1f5f30e4a2 
+•	DataCamp Python for Data Science course: https://www.datacamp.com/courses/intro-to-python-for-data-science
 
+### Pep8 style guide:
+https://www.python.org/dev/peps/pep-0008/
+
+### Why is something un-pythonic?
+https://docs.quantifiedcode.com/python-anti-patterns/index.html
