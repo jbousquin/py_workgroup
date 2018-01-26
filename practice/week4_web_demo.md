@@ -23,12 +23,22 @@ for f in contents_list:
     file_list.append(f)
 
 # List comprehension
-file_list = [f for f in contents_list if os.path.isfile(os.path.join(my_path, f)]
+file_list = [f for f in contents_list if os.path.isfile(os.path.join(my_path, f))]
 ```
 
 Last we delete the files:
 
 ```python
+for f in file_list:
+  os.remove(f)
+```
+
+Putting it all together (and putting os.listdir() in the list comprehension too):
+
+```python
+my_path = r"C:\Users\<username>\Desktop\test_folder"
+file_list = [f for f in os.listdir(my_path) if os.path.isfile(os.path.join(my_path, f))]
+
 for f in file_list:
   os.remove(f)
 ```
