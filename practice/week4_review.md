@@ -48,8 +48,8 @@ for i, item in enumerate(lst1):
 
 
 ### Dictionary iterators
-When using dictionaries remember elements are store by key not by position,
-meaning their order is ignored and they can't be indexed like lists. 
+When using dictionaries remember elements are store by key not by position,  
+meaning their order is ignored and they can't be indexed like lists.  
 When looping over a dictionary it will give keys:
 
 ```python
@@ -75,8 +75,7 @@ for item in dict1.items():
   print item
 ```
 
-Alternatively, we can get a list of keys and iterate over that if  
-we wanted:
+Alternatively, we can get a list of keys and iterate over that if we wanted:
 
 ```python
 for key in dict1.keys():
@@ -84,7 +83,7 @@ for key in dict1.keys():
   print "Position : " + str(dict1.keys().index(key))
 ```
 
-And, as you might have suspected, you can get a list of the key values using
+And, as you might have suspected, you can get a list of the key values using  
 .values():
 
 ```python
@@ -100,10 +99,8 @@ type(dict1.values())
 ```
 
 ### New data types set() and tuple()
-If you look at each item in a dict.items() list, you may notice an unfamiliar data type
-(a, b). These are [tuples](https://www.tutorialspoint.com/python/python_tuples.htm). Tuples are like lists except  
-that they are immutable, meaning you can't update the value of elements in  
-place like with a list:
+If you look at each item in a dict.items() list, you may notice an unfamiliar data type  
+(a, b). These are [tuples](https://www.tutorialspoint.com/python/python_tuples.htm). Tuples are like lists except they are immutable,   meaning you can't update the value of elements in place like with a list:
 
 ```python
 var = "a", "b"
@@ -163,7 +160,7 @@ for item in lst1:
     lst2.append(item)
 ```
 
-But that is a lot of lines of code just to remove NA.
+But that is a lot of lines of code just to remove NA.  
 List comprehension allows you to do this pythonically, as one line:
 
 ```python
