@@ -1,6 +1,6 @@
 This file is what I'll walk through to review the code topics on the agenda
 
-###list iterators
+### List iterators
 Last time we looked at using an iterator to keep track of how many items we've gone through in a for loop, e.g.:
 
 ```python
@@ -43,7 +43,7 @@ for i, item in enumerate(lst1):
 ```
 
 
-###dictionary iterators
+### Dictionary iterators
 When using dictionaries remember that their order isn't stored so they can't be indexed like lists. When looping over a dictionary it will give keys:
 
 ```python
