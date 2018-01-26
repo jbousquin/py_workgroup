@@ -50,3 +50,11 @@ https://www.python.org/dev/peps/pep-0008/
 
 ### Why is something un-pythonic?
 https://docs.quantifiedcode.com/python-anti-patterns/index.html
+
+
+### R or python
+My opinion is each has it's use cases where it is better suited. I've been acusing of always answering with "it depends," so a little more - R was writen by statisticians as a user-friendly way to do data analysis, stats and graphical models; python is written by programers as a efficient and readable programing language and has had stats capabilities added to it. So python is more efficient and generally plays more nicely with other code/programs, but R has more statistics and visualization capacity and many of those are more user friendly. Both have extensive user communities, so if "there is a library/package for that" isn't true of either yet, just give it time (year old e.g. [here](https://elitedatascience.com/r-vs-python-for-data-science)). Here is what other people say:
+
+https://www.datacamp.com/community/tutorials/r-or-python-for-data-analysis
+https://www.kdnuggets.com/2015/05/r-vs-python-data-science.html
+https://www.datascience.com/blog/r-vs-python-for-data-models-data-science
