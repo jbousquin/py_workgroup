@@ -35,3 +35,5 @@ something.special
 something.special_method("_")
 something.special
 ```
+
+## File Objects and input/output
