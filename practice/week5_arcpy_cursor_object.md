@@ -26,7 +26,7 @@ We could instead use an update cursor to add values to a field from a list:
 ```python
 def list_to_field(table, field, lst)
   i = 0
-  with arcpy.da.SearchCursor(table, [field]) as cusor:
+  with arcpy.da.UpdateCursor(table, [field]) as cusor:
     for row in cusor:
       row[0] = lst[i]
       i += 1
