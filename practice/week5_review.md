@@ -23,8 +23,8 @@ Add a method to the new class:
 class NewClass(object):
   def __init__(self, var1):
     self.var1 = var1
-  def special_method(char):
-    self.special = char + var1 + char
+  def special_method(self, char):
+    self.special = char + self.var1 + char
 ```
 
 Test it out:
