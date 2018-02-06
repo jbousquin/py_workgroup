@@ -30,7 +30,7 @@ def list_to_field(table, field, lst)
     for row in cusor:
       row[0] = lst[i]
       i += 1
-      cursor.updateRow(row)
+      cusor.updateRow(row)
 ```
 
 Notice the update cursor used a .updateRow() method.
