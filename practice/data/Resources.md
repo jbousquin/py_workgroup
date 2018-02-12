@@ -36,6 +36,15 @@ Hackerrank Python Tutorials: https://www.hackerrank.com/python-tutorial
 
 Code Academy Intro to Python Course:  https://www.codecademy.com/learn/learn-python
 
+### GeoSpatial Instructional Videos
+Introduction to ArcPy - https://vimeo.com/133590224
+Creating Variables and Assigning Data - https://vimeo.com/104028282
+Basic Python Statements - https://vimeo.com/105271585
+Creating and Using Functions - https://vimeo.com/107270986
+Lists, Tuples, Dictionaries - https://vimeo.com/109254737
+Classes and Objects - https://vimeo.com/110920298
+Reading and Writing Text Files - https://vimeo.com/111126962
+
 ### Learning Python for Data Science
 
 Python for Data Science on EPA's Skillport site:  https://epa.skillport.com/skillportfe/main.action#browse/ee90310a-0f07-4274-95e5-5c1f5f30e4a2 
