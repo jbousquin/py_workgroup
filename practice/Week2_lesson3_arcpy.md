@@ -3,7 +3,7 @@ ArcGIS Desktop tasks and processing are able to be automated through python. Pyt
 In the excercise we will take a simple task in arcMap and perform it using python instead of through the Graphic User Interface (GUI).
 
 ## Data to use for this excercise
-In the week 1 web exercise we downloaded a shapefile of Santa Rosa County to the desktop. Start by unzipping that file to a folder on the desktop and add it as a layer in arcMap. If that data is not accessible the zip file `tl_2012_12113_addrfeat.zip` can be downloaded from [GitHub](https://github.com/jbousquin/py_workgroup/tree/master/practice/data/tl_2012_12113_addrfeat.zip)
+In the Week2_lesson2_web exercise we downloaded a shapefile of Santa Rosa County to the desktop. Start by unzipping that file to a folder on the desktop and add it as a layer in arcMap. If that data is not accessible the zip file `tl_2019_12113_addrfeat.zip` can be downloaded from [GitHub](https://github.com/jbousquin/py_workgroup/tree/master/practice/data/tl_2019_12113_addrfeat.zip)
 
 1. Right click the zip file, go to WinZip > Extract to folder `C:\Users\<user name>\Desktop\tl_2012_12113_addrfeat`
 
@@ -25,18 +25,18 @@ print
 
 You can set variables just like before. The shapefile can be declared as a variable:
 
-    shapefile = r"C:\Users\<user name>\Desktop\tl_2012_12113_addrfeat\tl_2012_12113_addrfeat.shp"
+    shapefile = r"C:\Users\<user name>\Desktop\tl_2019_12113_addrfeat\tl_2019_12113_addrfeat.shp"
 
 ## First create a copy of a shapefile
 1. In ArcMap go to Add Data (The plus sign on the yellow box in the toolbar).
-3. Navigate to the new folder and Add the new shapefile `tl_2012_12113_addrfeat.shp` as a layer on your map.
+3. Navigate to the new folder and Add the new shapefile `tl_2019_12113_addrfeat.shp` as a layer on your map.
 4. Copy the shapefile using the `Copy Features` tool under Data Management Tools > Features in ArcToolbox.
 For Input Features just drag and drop the layer from your table of contents. For the Output Features we're going to save it to the desktop as `newShapefile.shp`
 
 ## Layers vs shapefiles
 In arcToolbox there are differences between when you drag and drop a layer and when you navigate to or type in the shapefile. The same differences carry over to the python window. We can set variables based on layers already in our map without knowing the shapefile location.
 
-    lyr = 'tl_2012_12113_addrfeat'
+    lyr = 'tl_2019_12113_addrfeat'
     
 The value for lyr can either be typed out or dragged and dropped. Just remember these two are not equivalent, one is a layer on the map and the other is a specific shapefile.
 
@@ -75,7 +75,7 @@ Each time a task is performed in arcMap a record of it appears in results. Open 
 
 In the first line is a comment about replacing the layer `"tl_2012_12113_addrfeat"` the second line is the function we previously typed out with some additions:
 
-    arcpy.CopyFeatures_management(in_features="tl_2012_12113_addrfeat", out_feature_class="C:/Users/<user name>/Desktop/newShapefile.shp", config_keyword="", spatial_grid_1="0", spatial_grid_2="0", spatial_grid_3="0")
+    arcpy.CopyFeatures_management(in_features="tl_2019_12113_addrfeat", out_feature_class="C:/Users/<user name>/Desktop/newShapefile.shp", config_keyword="", spatial_grid_1="0", spatial_grid_2="0", spatial_grid_3="0")
     
 The layer must be replaced because outside of the python window in arcMap it doesn't mean anything to python. The other additions are defaults that we didn't set. Copying the result as a python snipet is not foolproof, but it can get you started.
 
