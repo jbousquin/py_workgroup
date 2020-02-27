@@ -5,7 +5,7 @@ If you're able to download something using the web, you should be able to do it 
 Let's say we wanted to get a shapefile for Santa Rosa county. 
   1. Google "santa rosa county census shapefile" and follow the first [hit](https://catalog.data.gov/dataset/tiger-line-shapefile-2019-county-santa-rosa-county-fl-address-range-feature-county-based)
   2. Scroll down on the site to find the first download button and copy it's link address. It should be:
-  http://www2.census.gov/geo/tiger/TIGER2012/ADDRFEAT/tl_2012_12113_addrfeat.zip
+  https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/tl_2019_12113_addrfeat.zip
 
 Now open your python shell. First, add some descriptive text about what the file does using comments:
 
@@ -14,7 +14,7 @@ Now open your python shell. First, add some descriptive text about what the file
 
 Next, we need to declare a variable for the link:
 
-    url = "http://www2.census.gov/geo/tiger/TIGER2012/ADDRFEAT/tl_2012_12113_addrfeat.zip"
+    url = "https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/tl_2019_12113_addrfeat.zip"
   
 Typing a variable (e.g. url) into the shell will print the evaluation of that variable.
 
