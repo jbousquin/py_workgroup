@@ -3,7 +3,7 @@ If you're able to download something using the web, you should be able to do it 
 # Create url to retrive
 
 Let's say we wanted to get a shapefile for Santa Rosa county. 
-  1. Google "santa rosa county shapefile" and follow the first [hit](https://catalog.data.gov/dataset/tiger-line-shapefile-2012-county-santa-rosa-county-fl-address-range-feature-county-based)
+  1. Google "santa rosa county census shapefile" and follow the first [hit](https://catalog.data.gov/dataset/tiger-line-shapefile-2019-county-santa-rosa-county-fl-address-range-feature-county-based)
   2. Scroll down on the site to find the first download button and copy it's link address. It should be:
   http://www2.census.gov/geo/tiger/TIGER2012/ADDRFEAT/tl_2012_12113_addrfeat.zip
 
