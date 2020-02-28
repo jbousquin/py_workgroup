@@ -21,7 +21,7 @@ We won't use any functions yet, so the next step is to define input variables. D
 
     names = "Fifth Ave (boat launch)\n Little Sandy Pond\n skinequit pond\n Bearses Pond\n Picture Lake (Flax Pond)\n Sand Pond,\n WHITE POND\n Dennis Pond\n Buck's Pond\n Hinkley's Pond\n Flax Pond (Yarmouth/Dennis)\n Long Pond-Long Pond Drive\n Long Pond-Cahoon St.\n Long Pond\n Upper Mill Pon\n Queen Sewell Pond\n Gull Pond - Gull Pond Landing\n Gull Pond (2) - Steele Rd.\n Tides Hotel\n Long Pond - Indian\n PARKERS RIVER SPORTFISHING PIER\n BASS RIVER(UNC.  FREEMAN'S LANDING)\n BAKER'S POND\n WEQUASSETT INN\n"
     
-Now we can experiment with some of the string methods available for use on the variable names because it is string datatype. If you aren't sure what the dot notatoin methods are you can either google the documentation or, depending on your IDE it may make suggestions just after typing:
+Now we can experiment with some of the string methods available for use on the variable names because it is string datatype. If you aren't sure what the dot notation methods are you can either google the documentation or, depending on your IDE it may make suggestions just after typing:
 
     names.
 
