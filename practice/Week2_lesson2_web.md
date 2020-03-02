@@ -58,6 +58,7 @@ A module can be imported using import <module name>:
     import os
     import arcpy
     import urllib
+    import urllib.request
 ```
 
 The os module gives us operating system based functions. When we were declaring our fullFileName, if we didn't know the expected seperators were `"\\"` we could have used the sep function in the os module:
@@ -66,12 +67,18 @@ The os module gives us operating system based functions. When we were declaring 
   
 The arcpy module allows us to use arcGIS functionality outside of arcGIS desktop. In the python window of arcMap this module is already imported.
 
-The urllib module is one of the packages for using urls. There are several that can be used depending on your specific needs and instal.
+The urllib module is one of the packages for using urls in Python 2. There are several that can be used depending on your specific needs and instal.
 Once urllib is imported the functions inside can be accessed using the module they are in and dot notation:
 
 ```python
     import urllib
     urllib.urlretrieve()
+```
+However, in Python 3.x, the urllib module has been split into separate modules. The equivalent to urlretrieve() in Python 3 is:
+
+```python
+    import urllib.request
+    urllib.request.urlretrieve()
 ```
 
 The function urlretrieve() performs some function on the variables we put in (). When a function isn't given the variables (aka arguments) that it expects you should get an error. The urlretrieve() function expects at least 1 argument and so you get an error:
@@ -91,6 +98,10 @@ The python documentation can be jargony, scroll down to urllib.**urlretrieve**(u
 It looks like it wants (url, filename) as the variables:
 
     urllib.urlretrieve(url, fullFileName)
+
+If using Python 3, the function looks like this:
+
+    urllib.request.urlretrieve(url, fullFileName)
 
 Go see if it worked!
 
