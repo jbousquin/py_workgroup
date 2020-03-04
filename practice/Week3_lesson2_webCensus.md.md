@@ -18,7 +18,7 @@ fullFileName = filepath + os.sep + "SantaRosaCounty.zip"
 
 if py 3.x
 ```python
-    from urllib.request import urlretrieve
+from urllib.request import urlretrieve
 ```
 ## Downloading county shapefiles
 
@@ -31,9 +31,9 @@ This time, instead navigate to the page where the zip file is located: https://w
 All the files hosted here are for different counties in the United States as of 2019. You might notice they all start with 'tl_2019_' and end with '_addrfeat.zip' The 5 digits that change are called FIPS or GEOIDs and each equates to a different county (see [nrcs link](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/fl/about/?cid=nrcs143_013697)). The first 2 digits identify the state, e.g. 12 = Florida, then the last 3 digits are for the county, e.g.  113. 
 
 Let's start by getting the files for both Santa Rosa and Escambia County (FL). We know the FIPS codes for those so let's start by creating a list of the codes:
-
-    fips_list = [12113, 12033]
-
+```python
+fips_list = [12113, 12033]
+```
 We know we'll need to construct 2 things for each:
      (1) the url to get the link from 
      (2) a unique file name, since fullFileName = filepath + os.sep + "SantaRosaCounty.zip" won't work for Escambia County
