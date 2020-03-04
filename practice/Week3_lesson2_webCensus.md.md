@@ -71,7 +71,7 @@ Those variables will work and will allow you to download the files using urllire
     urlretrieve(url_SantaRosa, fileName_SantaRosa)
     urlretrieve(url_Escambia, fileName_Escambia)
 ```
-
+## Downloading using for loop over list
 But that's like 8 lines of code, is that really any better than just clicking the two links and changing the file names? Now let's instead do the same thing within a for loop where we will loop over our list, downloading files as we go:
 
 ```python
@@ -80,7 +80,7 @@ for fip in fips_list:
    fileName = os.path.join(filepath, 'county_{}.zip'.format(fip)
    urlretrieve(url, fileName)
 ```
-
+## Downloading using a function
 Taking it a step furth we could create a function to download the file to the destination given any FIP:
 
 ```python
@@ -125,11 +125,11 @@ And set either the original variable or a new variable to the result:
 for fip in fips_list:
    base_url2 = downloadCounty(fip, filepath)
 ```
-
+## Downloading a subset for a longer list using conditional
 You are probably not impressed with the for loop or function as it only reduced your code by two lines, but now it doesn't matter how long your list is you could download all the counties in FL if you wanted. For instance lets say you have a complete list of all the FIPS scraped from a website (to keep it short this is just FL and AL):
 
 ```python
-FIPS_list = ['01067', '01073', '01117', '01095', '01123', '01107', '01039', '01015', '01043', '01115', '01083', '01053', '01055', '01081', '01003', '01097', '01007', '01071', '01109', '01021', '01131', '01127', '01019', '01121', '01005', '01045', '01103', '01091', '01069', '01031', '01035', '01057', '01077', '01049', '01061', '01065', '01013', '01093', '01133', '01029', '01089', '01025', '01017', '01027', '01119', '01041', '01105', '01001', '01051', '01099', '01101', '01079', '01033', '01125', '01009', '01113', '01059', '01111', '01047', '01075', '01087', '01011', '01023', '01037', '01063', '01085', '01129', '12001', '12117', '12081', '12037', '12095', '12027', '12031', '12099', '12105', '12086', '12055', '12103', '12083', '12013', '12059', '12071', '12049', '12077', '12053', '12035', '12119', '12005', '12009', '12075', '12039', '12133', '12069', '12051', '12011', '12107', '12091', '12017', '12101', '12127', '12131', '12021', '12041', '12061', '12089', '12111', '12063', '12019', '12113', '12007', '12047', '12087', '12097', '12125', '12023', '12121', '12003', '12079', '12065', '12043', '12115', '12093', '12033', '12123', '12057', '12045', '12015', '12129', '12109', '12085', '12073', '12029', '12067']
+fips_list = ['01067', '01073', '01117', '01095', '01123', '01107', '01039', '01015', '01043', '01115', '01083', '01053', '01055', '01081', '01003', '01097', '01007', '01071', '01109', '01021', '01131', '01127', '01019', '01121', '01005', '01045', '01103', '01091', '01069', '01031', '01035', '01057', '01077', '01049', '01061', '01065', '01013', '01093', '01133', '01029', '01089', '01025', '01017', '01027', '01119', '01041', '01105', '01001', '01051', '01099', '01101', '01079', '01033', '01125', '01009', '01113', '01059', '01111', '01047', '01075', '01087', '01011', '01023', '01037', '01063', '01085', '01129', '12001', '12117', '12081', '12037', '12095', '12027', '12031', '12099', '12105', '12086', '12055', '12103', '12083', '12013', '12059', '12071', '12049', '12077', '12053', '12035', '12119', '12005', '12009', '12075', '12039', '12133', '12069', '12051', '12011', '12107', '12091', '12017', '12101', '12127', '12131', '12021', '12041', '12061', '12089', '12111', '12063', '12019', '12113', '12007', '12047', '12087', '12097', '12125', '12023', '12121', '12003', '12079', '12065', '12043', '12115', '12093', '12033', '12123', '12057', '12045', '12015', '12129', '12109', '12085', '12073', '12029', '12067']
 ```
 
 We would use a conditional within our for loop to determine if it would be downloaded or not:
