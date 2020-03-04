@@ -17,9 +17,9 @@ fullFileName = filepath + os.sep + "SantaRosaCounty.zip"
 ```
 
 if py 3.x
-
+```python
     from urllib.request import urlretrieve
-
+```
 ## Downloading county shapefiles
 
 Last week we downloaded a shapefile for Santa Rosa County using:
