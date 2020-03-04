@@ -116,7 +116,7 @@ print query
 
 Using that we see we'll need to remove the last " OR ", but otherwise it seems to work. We'll add that and then use it to make the selection:
 
-```
+```python
 where_clause = where_clause[:-4]
 arcpy.SelectLayerByAttribute_management("temp_layer", "NEW_SELECTION", where_clause)
 ```
