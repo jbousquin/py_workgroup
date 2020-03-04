@@ -1,7 +1,12 @@
 This week we talked about lists. Lists are one of the main ways groups of data can be managed.
 Feature attribute tables have data in fields, although these entire tables can be handled as multi-dimensional arrays in numpy, we're going to play with them as lists.
 
-Pulling feature attributes to a list is a bit beyond what we've done so far, but I've provided a field_to_list() function in the utils.py module
+Pulling feature attributes to a list is a bit beyond what we've done so far, but I've provided a field_to_list() function in the utils.py module, or use the simplified:
+
+```python
+def field_to_list(table, field):
+  return [row[0] for row in arcpy.da.SearchCursor(table, [field])]
+```
 
 ## QC data in field
 I want to compare data over time for a given point. Normally I might create a third field and then use field calculator to fill it in.
@@ -45,7 +50,7 @@ Traceback (most recent call last):
 ValueError: could not convert string to float: 
 ```
 
-We dig can dig in to find that this string value is null u' '. There are a few ways we could handle this, but let's try just catching those nulls and saving them to the list as such:
+We can dig in to find that this string value is null u' '. There are a few ways we could handle this, but let's try just catching those nulls and saving them to the list as such:
 
 ```python
 diff_list = []
