@@ -9,12 +9,16 @@ We'll start off setting up our script just like last time
 ```python
 # Author name
 # other comments with relevant metadata
-import urllib
+from urllib import urlretrieve
 import os
    
 filepath = r"C:\Users\<user name>\Desktop"
 fullFileName = filepath + os.sep + "SantaRosaCounty.zip"
 ```
+
+if py 3.x
+
+    from urllib.request import urlretrieve
 
 ## Downloading county shapefiles
 
