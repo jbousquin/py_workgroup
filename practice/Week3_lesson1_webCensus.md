@@ -62,8 +62,8 @@ The string is everything between ' and ', anywhere there is a {} a piece of info
 Next we need to set unique fullFileName variables. Again we could do that by indexing our list:
 
 ```python
-fileName_SantaRosa = os.path.join(filepath, 'county_{}.zip'.format(fips_list[0])
-fileName_Escambia = os.path.join(filepath, 'county_{}.zip'.format(fips_list[1])
+fileName_SantaRosa = os.path.join(filepath, 'county_{}.zip'.format(fips_list[0]))
+fileName_Escambia = os.path.join(filepath, 'county_{}.zip'.format(fips_list[1]))
 ```
 
 Those variables will work and will allow you to download the files using urlliretrieve again:
