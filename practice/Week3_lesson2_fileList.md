@@ -64,7 +64,7 @@ All we have to do to change the file type is change the '.pdf' condition
 
 For this excercise we're going to rename the files so it is handy to have a list in python, but in the future we'll learn how to write this list to a text file that can easily be imported into excel or some other type of software to track all your files. You could also use other conditionals (e.g. parts of the file name) to identify specific files within a list by file type to do something to. For example I use a script to periodically clean my desktop and file away any notes I saved as textfiles.
 
-##Rename files in a list
+## Rename files in a list
 WARNING anytime you delete or otherwise alter files using python you need to be extremely careful, it is easy to get disoriented on what directory you're working in and files deleted this way can't be retreived from the recycle bin.
 
 For this we'll use the os.rename:
