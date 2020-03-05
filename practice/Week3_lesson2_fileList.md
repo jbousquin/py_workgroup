@@ -85,5 +85,13 @@ os.rename(old, new)
 
 Now that you have tested it out try it within a for loop
 
-##Other file name tricks
-Keep in mind this approach can also be used to put the same file in a different folder/directory, change the filetype or to do various other things.
+## Other file name tricks
+Keep in mind this approach can also be used to put the same file in a different folder/directory, change the filetype or to do various other things. It also becomes more handy as you have more information about the file being renamed.
+
+To split the filename from the extension you can use the os.path.splitext() function, which returns a list with the filename and the extension:
+```python
+first_file = file_list[0]
+newName = os.path.splitext(first_file)[0] + 'prj' +  os.path.splitext(first_file)[1]
+new = os.path.join(path, newName)
+```
+This has the advantage over .split('.') because it distinguishes between the extension and any leading '.' in the path/file name.
