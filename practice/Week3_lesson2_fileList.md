@@ -38,7 +38,7 @@ Start by figuring out how to test if a file is a pdf
 ```python
 first_file = file_list[0]
 if first_file.endswith('.pdf'):
-	print('It's a PDF!')
+	print("It's a PDF!")
 else:
 	print('It is not a pdf')
 ```
