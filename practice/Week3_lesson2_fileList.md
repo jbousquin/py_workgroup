@@ -67,7 +67,7 @@ For this excercise we're going to rename the files so it is handy to have a list
 ## Rename files in a list
 WARNING anytime you delete or otherwise alter files using python you need to be extremely careful, it is easy to get disoriented on what directory you're working in and files deleted this way can't be retreived from the recycle bin.
 
-For this we'll use the os.rename:
+For this we'll use the os.rename() function:
 ```python
 os.rename(old, new)
 ```
