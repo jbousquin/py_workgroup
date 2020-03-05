@@ -23,9 +23,10 @@ from urllib.request import urlretrieve
 ## Downloading multiple county shapefiles
 
 Last week we downloaded a shapefile for Santa Rosa County using:
-
-    url = https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/tl_2019_12113_addrfeat.zip
-
+```python
+    url = 'https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/tl_2019_12113_addrfeat.zip'
+    urlretrieve(url, fullFileName)
+```
 This time, instead navigate to the page where the zip file is located: https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT
 
 All the files hosted here are for different counties in the United States as of 2019. You might notice they all start with 'tl_2019_' and end with '_addrfeat.zip' The 5 digits that change are called FIPS or GEOIDs and each equates to a different county (see [nrcs link](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/fl/about/?cid=nrcs143_013697)). The first 2 digits identify the state, e.g. 12 = Florida, then the last 3 digits are for the county, e.g.  113. 
