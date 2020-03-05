@@ -73,3 +73,20 @@ for item in file_list:
 #     new_name = os.path.join(path, #name?)
 #     os.rename(item, new_name)
 ```
+
+Now lets say we have an excel sheet with all our old names and we went through it and lined each one up to create our new names, then read those new names into a python list:
+```python
+new_names = []
+```
+First we'll test that the two have the same number of names
+```python
+len(pdf_list) == len(new_names)
+```
+Then we can update our loop over the pdf_list to change all the names:
+```python
+for i, item in enumerate(pdf_list):
+     new_name = os.path.join(path, new_names[i])
+     os.rename(item, new_name)
+```
+
+Now of course in the real application you'd want to probably read in the old name from that excel file too rather than trusting os.listdir() to go in the expected order.
