@@ -53,8 +53,8 @@ url_Escambia = base_url + 'tl_2019_' + str(fips_list[1]) + '_addrfeat.zip'
 You'll notice we had to coerce both fips to string using str() because they were both int() datatype. There are several ways to format strings to combine several pieces of information from variables, one of these is the string .format method:
 
 ```python
-   url_SantaRosa = '{}tl_2019_{}_addrfeat.zip'.format(base_url, fips_list[0])
-   url_Escambia = '{}tl_2019_{}_addrfeat.zip'.format(base_url, fips_list[1])
+url_SantaRosa = '{}tl_2019_{}_addrfeat.zip'.format(base_url, fips_list[0])
+url_Escambia = '{}tl_2019_{}_addrfeat.zip'.format(base_url, fips_list[1])
 ```
 
 The string is everything between ' and ', anywhere there is a {} a piece of information is inserted into the string. The two results are about the same length, but it is easier to read and the variables are automatically coerced to string.
@@ -62,15 +62,15 @@ The string is everything between ' and ', anywhere there is a {} a piece of info
 Next we need to set unique fullFileName variables. Again we could do that by indexing our list:
 
 ```python
-   fileName_SantaRosa = os.path.join(filepath, 'county_{}.zip'.format(fips_list[0])
-   fileName_Escambia = os.path.join(filepath, 'county_{}.zip'.format(fips_list[1])
+fileName_SantaRosa = os.path.join(filepath, 'county_{}.zip'.format(fips_list[0])
+fileName_Escambia = os.path.join(filepath, 'county_{}.zip'.format(fips_list[1])
 ```
 
 Those variables will work and will allow you to download the files using urlliretrieve again:
 
 ```python
-    urlretrieve(url_SantaRosa, fileName_SantaRosa)
-    urlretrieve(url_Escambia, fileName_Escambia)
+urlretrieve(url_SantaRosa, fileName_SantaRosa)
+urlretrieve(url_Escambia, fileName_Escambia)
 ```
 ## Downloading using for loop over list
 But that's like 8 lines of code, is that really any better than just clicking the two links and changing the file names? Now let's instead do the same thing within a for loop where we will loop over our list, downloading files as we go:
