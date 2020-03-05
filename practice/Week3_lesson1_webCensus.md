@@ -24,8 +24,8 @@ from urllib.request import urlretrieve
 
 Last week we downloaded a shapefile for Santa Rosa County using:
 ```python
-    url = 'https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/tl_2019_12113_addrfeat.zip'
-    urlretrieve(url, fullFileName)
+url = 'https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/tl_2019_12113_addrfeat.zip'
+urlretrieve(url, fullFileName)
 ```
 This time, instead navigate to the page where the zip file is located: https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT
 
@@ -46,7 +46,7 @@ For the link we'll use the host page as a starting point for constructing our ur
 We could construct each link using the list and index:
 
 ```python
-url_SantaRose = base_url + 'tl_2019_' + str(fips_list[0]) + '_addrfeat.zip'
+url_SantaRosa = base_url + 'tl_2019_' + str(fips_list[0]) + '_addrfeat.zip'
 url_Escambia = base_url + 'tl_2019_' + str(fips_list[1]) + '_addrfeat.zip'
 ```
 
