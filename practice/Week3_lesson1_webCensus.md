@@ -78,7 +78,7 @@ But that's like 8 lines of code, is that really any better than just clicking th
 ```python
 for fip in fips_list:
    url = '{}tl_2019_{}_addrfeat.zip'.format(base_url, fip)
-   fileName = os.path.join(filepath, 'county_{}.zip'.format(fip)
+   fileName = os.path.join(filepath, 'county_{}.zip'.format(fip))
    urlretrieve(url, fileName)
 ```
 ## Downloading using a function
@@ -88,7 +88,7 @@ Taking it a step furth we could create a function to download the file to the de
 def downloadCounty(fip, filepath):
    base_url = 'https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/'
    url = '{}tl_2019_{}_addrfeat.zip'.format(base_url, fip)
-   fileName = os.path.join(filepath, 'county_{}.zip'.format(fip)
+   fileName = os.path.join(filepath, 'county_{}.zip'.format(fip))
    urlretrieve(url, fileName)
 ```
 
@@ -105,7 +105,7 @@ You may notice we had to define base_url within our funtion. Variables are typic
 def downloadCounty(crazyFIPname, crazy_filepath):
    base_url = 'https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/'
    base_url = '{}tl_2019_{}_addrfeat.zip'.format(base_url, crazyFIPname)
-   fileName = os.path.join(crazy_filepath, 'county_{}.zip'.format(crazyFIPname)
+   fileName = os.path.join(crazy_filepath, 'county_{}.zip'.format(crazyFIPname))
    urlretrieve(base_url, fileName)
 ```
 
@@ -115,7 +115,7 @@ This also means any changes made within the function (e.g. to base_url) don't al
 def downloadCounty(crazyFIPname, crazy_filepath):
    base_url = 'https://www2.census.gov/geo/tiger/TIGER2019/ADDRFEAT/'
    base_url = '{}tl_2019_{}_addrfeat.zip'.format(base_url, crazyFIPname)
-   fileName = os.path.join(crazy_filepath, 'county_{}.zip'.format(crazyFIPname)
+   fileName = os.path.join(crazy_filepath, 'county_{}.zip'.format(crazyFIPname))
    urlretrieve(base_url, fileName)
    return base_url
 ```
