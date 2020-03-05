@@ -2,8 +2,8 @@ Ever have a folder full of files, like jpegs from your camera, that you want to 
 
 ## List files in folder 
 
-For this excercise you will need the the folder in ~py_workgroup\practice\data\99_files.zip
-where ~ is your local folder containing the github repo. Alternatively you can use my copy on the L or any folder containing multiple pdf files and other types of files.
+For this excercise you will need the contents of the folder 99_files in ~py_workgroup\practice\data\99_files.zip
+where ~ is your local folder containing the github repo. Alternatively you can use my copy on the L or any folder containing multiple pdf files and other types of files (just make a copy of it because the contents will be altered irrepably).
 Set up your script with the variable path set to the 99_files folder
 
 ```python
