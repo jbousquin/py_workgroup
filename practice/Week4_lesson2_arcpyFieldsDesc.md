@@ -50,3 +50,4 @@ delete_list = [field for field in fields_list if field not in keep_list]
 for field in delete_list:
   arcpy.DeleteField_management(lyr, field)
 ``
+## Get extent from shapefile
