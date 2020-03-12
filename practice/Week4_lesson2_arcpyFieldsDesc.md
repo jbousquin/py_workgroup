@@ -50,11 +50,11 @@ First we need our list of fields to delete. arpyc.ListFields() returns a list of
 ```python
 # Long version
 fields_list = []
-for x in arcpy.ListFields(lyr):
+for x in arcpy.ListFields(shp):
   fields_list.append(x.name)
   
 # Create a list for field names using list comprehension
-fields_list = [x.name for x in arcpy.ListFields(lyr)]  
+fields_list = [x.name for x in arcpy.ListFields(shp)]  
 ```
 
 Now we want to make a list of the fields to keep, and for any field in fields_list not  
@@ -76,21 +76,40 @@ And now we loop over our delete_list, deleting each field
 
 ```python
 for field in delete_list:
-  arcpy.DeleteField_management(lyr, field)
+  arcpy.DeleteField_management(shp, field)
 ```
 
 Our final code would look something like this:
 
 ```python
-fields_list = [x.name for x in arcpy.ListFields(lyr)]
+fields_list = [x.name for x in arcpy.ListFields(shp)]
 keep_list = ['FID', 'Shape', 'GEOID10', 'B01003_1E', 'HD01_VD01']
 delete_list = [field for field in fields_list if field not in keep_list]
 
 for field in delete_list:
-  arcpy.DeleteField_management(lyr, field)
+  arcpy.DeleteField_management(shp, field)
 ```
 
-## Reading features in a gdb
+## List of shapefiles or feature classes
+You can also read files to a list using arcpy, start off the same way but instead of setting a variable (e.g. shp) set it to your folder/geodatabase and set the current workspace to that using env
 ```python
-arcpy.ListFeatureClasses(gdb)
+import os
+import arcpy
+
+path = r''  # folder containting shapefiles
+gdb = r'.gdb'  # Alternatively you can set the workspace to a geodatabase
+
+# Set the workspace to path
+arcpy.env.workspace = path
+
+# Now list all the shapefiles in that folder
+featureClass_list = arcpy.ListFeatureClasses()
+```
+
+One time this might be useful is if combining it with functions from early excercises where we copied a shapefile or when re-projecting several files and copying them into a geodatabase:
+
+```python
+# Copy shapefiles in list to a file geodatabase
+for fc in featureClass_list:
+    arcpy.CopyFeatures_management(fc, os.path.join(gdb, os.path.splitext(fc)[0]))
 ```
