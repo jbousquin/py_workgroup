@@ -9,12 +9,16 @@ https://api.census.gov/data/key_signup.html
 We will start with the [2010 Decennial](https://www.census.gov/data/developers/data-sets/decennial-census.html) census. The census API is great in that each has:
 
 * API Call: api.census.gov/data/2010/dec/sf1?
+
 Which is like what we were using as our base_url in past examples
 
 * Example calls: https://api.census.gov/data/2010/dec/sf1?get=H001001,NAME&for=state:*
+
 Which are working examples of how to request specific information
 
 * API Variables: [html](https://api.census.gov/data/2010/dec/sf1/variables.html)[xml] (https://api.census.gov/data/2010/dec/sf1/variables.xml) [json](https://api.census.gov/data/2010/dec/sf1/variables.json)
+
+Which are very long lists of all the variables/parameters you can restrict your request with, and they're available in variety of formats.
 
 ## webservice queries
 Continuing with census, we'll take a look at the [TIGERweb geoservices Rest API](https://www.census.gov/data/developers/data-sets/TIGERweb-map-service.html). Within that folder of services lets start with [tigerWMS_Current](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer). Within that map service there are a bunch of layers, lets look at [Counties](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/86) (ID 86).
