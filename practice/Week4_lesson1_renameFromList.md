@@ -7,7 +7,7 @@ An iterator can be used to keep track of how many items we've gone through (iter
 lst1 = ["a", "b", "c", "d"]
 i = 0
 for item in lst1:
-     print(item + " is in the " + i + " place")
+     print(item + " is in the {} place".format(i))
      i += 1
 ```
 
