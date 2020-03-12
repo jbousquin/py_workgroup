@@ -31,9 +31,21 @@ Now you just got results for Florida! Now lets figure out what these H001001 res
 https://api.census.gov/data/2010/dec/sf1?get=H002005,NAME&for=state:12,01
 
 If we wanted to do that API request for any state in python:
+```python
+from urllib import urlretrieve  #py2.x
+from urllib.request import urlretrieve  #py3.x
 
+base_url = 'https://api.census.gov/data/2010/dec/sf1'
 
+# In this case urllib knows to insert the '?get='
+base_query = 'H002005,NAME&for=state:'
+state = '12'
 
+url = base_url
+query = base_query + state
+
+response = urlretrieve(url, query)
+```
 ## webservice queries
 Continuing with census, we'll take a look at the [TIGERweb geoservices Rest API](https://www.census.gov/data/developers/data-sets/TIGERweb-map-service.html). Within that folder of services lets start with [tigerWMS_Current](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer). Within that map service there are a bunch of layers, lets look at [Counties](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/86) (ID 86).
 
