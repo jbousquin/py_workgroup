@@ -16,7 +16,7 @@ Which is like what we were using as our base_url in past examples
 
 Which are working examples of how to request specific information
 
-* API Variables: [html](https://api.census.gov/data/2010/dec/sf1/variables.html)[xml] (https://api.census.gov/data/2010/dec/sf1/variables.xml) [json](https://api.census.gov/data/2010/dec/sf1/variables.json)
+* API Variables: [html](https://api.census.gov/data/2010/dec/sf1/variables.html) [xml](https://api.census.gov/data/2010/dec/sf1/variables.xml) [json](https://api.census.gov/data/2010/dec/sf1/variables.json)
 
 Which are very long lists of all the variables/parameters you can restrict your request with, and they're available in variety of formats.
 
