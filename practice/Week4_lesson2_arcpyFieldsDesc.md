@@ -1,4 +1,19 @@
-## Delete multiple fields
+We've seen some of the ways to read things on your system to a list (e.g. reading file names within a folder), but it is often useful to do the same type of thing in arc.
+
+## Reading features in a gdb
+We're working with arcpy, so if you're working outside of arcPro/ArcMap your script would start like:
+
+```python
+# Comments
+# Author
+
+import arcpy
+
+
+gdb = r'~py_workgroup\practice\data\99_files'
+```
+
+## Reading fields from a shp (Delete multiple fields)
 Ever have a huge table and you only care about a couple fields, but all the extras make it  
 hard to work with? Clicking each one and deleting is a pain.
 Well we can make a list of the fields, subset it with the names we want to keep and then  
