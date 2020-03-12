@@ -25,9 +25,21 @@ We've created a variable called desc which is a 'geoprocessing describe data obj
 ```python
 desc.dataType
 ```
-For a broader list of the dataset properties see the (documentation)[https://pro.arcgis.com/en/pro-app/arcpy/functions/dataset-properties.htm].
+For a broader list of the dataset properties see the [documentation](https://pro.arcgis.com/en/pro-app/arcpy/functions/dataset-properties.htm).
 
 ## Get extent from shapefile
+Some of the properties from the describe object return another object. Two that are particurly useful are the [spatialReference](https://pro.arcgis.com/en/pro-app/arcpy/classes/spatialreference.htm) and the [extent](https://pro.arcgis.com/en/pro-app/arcpy/classes/extent.htm):
+
+```python
+desc.spatialReference
+desc.spatialReference.factoryCode  # EPSG
+desc.spatialReference.name
+desc.spatialReference.exportToString()
+
+desc.extent
+desc.extent.XMax
+desc.extent.JSON
+```
 
 ## Reading fields from a shp (Delete multiple fields)
 Ever have a huge table and you only care about a couple fields, but all the extras make it hard to work with? Clicking each one and deleting is a pain.
@@ -76,6 +88,9 @@ delete_list = [field for field in fields_list if field not in keep_list]
 
 for field in delete_list:
   arcpy.DeleteField_management(lyr, field)
-``
+```
 
 ## Reading features in a gdb
+```python
+arcpy.ListFeatureClasses(gdb)
+```
