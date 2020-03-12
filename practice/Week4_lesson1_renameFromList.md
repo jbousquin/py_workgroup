@@ -28,7 +28,7 @@ lst2 = ["a1", "b1", "c1", "d1"]
 
 for item in lst1:
      item2 = lst1.index(item)
-     print(', position{}'.format(lst2[item2], item2)
+     print(', position{}'.format(lst2[item2], item2))
 ```
 
 However, if the list contains multiple instances of the same value this will  
