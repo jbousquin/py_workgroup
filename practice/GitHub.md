@@ -10,7 +10,7 @@ Here are my top reasons for using version control:
 3. Collaboration (I update what is on my home machine based on commits I made at work today and unless I commit changes a new version isn't created. Anyone else can suggest code changes or identify issues.)
 
 # GitHub
-There is an official [USEPA GitHub account](https://github.com/USEPA). Before posting there review their [guidelines](https://usepa.sharepoint.com/sites/AO_FOIA_Centralization/Shared%20Documents/Office%20of%20Public%20Affairs/Collected%20OPA%20Documents/EPA-HQ-2017-004882/GitHub%20Guidance%20_%20Web%20Guide%20_%20US%20EPA.pdf)
+There is an official [USEPA GitHub account](https://github.com/USEPA). Before posting there review their [guidelines](https://www.epa.gov/webguide/github-guidance)
 
 My short version would be: 
 1. Don't put anything up in a public repository that isn't already reviewed and public.
