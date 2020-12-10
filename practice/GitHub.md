@@ -12,8 +12,6 @@ Here are my top reasons for using version control:
 # GitHub
 There is an official [USEPA GitHub account](https://github.com/USEPA). Before posting there review their [guidelines](https://www.epa.gov/webguide/github-guidance)
 
-Bad change that I'll delete later
-
 My short version would be: 
 1. Don't put anything up in a public repository that isn't already reviewed and public.
 2. Even private repositories shouldn't contain protected or propriatary code.
