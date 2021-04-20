@@ -10,7 +10,7 @@ import arcpy
 
 # Set your file names
 shp = r'L:\Public\jbousqui\Code\GitHub\H2O_BEST\greenspace_access\package\tests\parcels.shp'
-out_shp = r'L:\Public\jbousqui\Code\GitHub\H2O_BEST\greenspace_access\package\tests\parcels3.shp'
+out_shp = r'L:\Public\jbousqui\Code\GitHub\H2O_BEST\greenspace_access\package\tests\parcels2.shp'
 
 field = 'parcels1_5'  # The field you want to select on
 
@@ -25,14 +25,6 @@ field_values = [row[0] for row in arcpy.da.SearchCursor(shp, [field])]
 # Coerce that list to a set (all unique) then back to a list (order changes)
 unique_values = list(set(field_values))
 
-# Reduce the fields with the familiar list comprehension method
-fields_keepList= ['FID',
-                  'Shape',
-                  'parcels1_1',
-                  'parcels1_5',
-                  'parcels_22',
-                  'CONTROLNO']
-
 # Generate selection layer from attribute query to copy
 # First make the shp a layer
 lyr = "parcels_lyr"
@@ -44,8 +36,14 @@ drop_values = ['COUNTIES (OTHER THAN PUBLIC SCHOOLS, COLLEGES, HOSPITALS) INCLUD
                'PARCELS WITH NO VALUES',
                'PUBLIC COUNTY SCHOOLS - INCLUDING ALL PROPERTY OF BOARD OF PUBLIC INSTRUCTION',
                'RIVERS AND LAKES, SUBMERGED LANDS',
-               'STATE, OTHER THAN MILITARY, FORESTS, PARKS, RECREATIONAL AREAS, COLLEGES, HOSPITALS']
-where_qry = ["{} = '{}' OR ".format(field, val) for val in drop_values][:-4]
+               'STATE, OTHER THAN MILITARY, FORESTS, PARKS, RECREATIONAL AREAS, COLLEGES, HOSPITALS',
+               'UTILITY, GAS AND ELECTRICITY, TELEPHONE AND TELEGRAPH, LOCALLY ASSESSED RAILROADS, WATER AND SEWER SERVICE, PIPELINES, CANALS, RADIO/TELEVISION COMMUNICATION',
+               'RIGHT-OF-WAY, STREETS, ROADS, IRRIGATION CHANNEL, DITCH, ETC.',
+               'MUNICIPAL, OTHER THAN PARKS, RECREATIONAL AREAS, COLLEGES, HOSPITALS',
+               'AIRPORTS (PRIVATE OR COMMERCIAL), BUS TERMINALS, MARINE TERMINALS, PIERS, MARINAS',
+               'SEWAGE DISPOSAL, SOLID WASTE, BORROW PITS, DRAINAGE RESERVOIRS, WASTE LAND, MARSH, SAND DUNES, SWAMPS',]
+#where_qry = ["{} = '{}' OR ".format(field, val) for val in drop_values][:-4]
+where_qry = "{} = '".format(field) + "' OR {} = '".format(field).join(drop_values) + "'"
 # Long form
 #where_qry = ''
 #for val in select_values:
