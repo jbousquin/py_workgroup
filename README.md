@@ -1,6 +1,8 @@
 # py_workgroup
 This repository contains materials for the workgroup to use while learning python.
 
+edit
+
 The purpose of this group is to work together to learn new skills, languages, data science practices, etc. as they relate to our research in environmental science. The primary focus will be the use of python, with excercises focused on accessing data from the web and manipulating spatial data in arcGIS desktop using arcpy. However, topics are not limited to these and you're encouraged to bring ideas and tools from other topics or languages.
 
 # GitHub and this repository
