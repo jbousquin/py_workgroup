@@ -18,17 +18,19 @@
 
 ## Tools
 Text editor – where your script is written
-* IDLE (in python instal)
+* IDLE (in python install)
 * Notepad
 * Notepad++
-* Visual Studio
-* Rstudio
-Development environment (IDE) – where code is run (Console)
+Console - where code is run
+* IDLE Shell
 * Command line
-* Spyder (similar to R studio/matlab, comes with annaconda)
+Integrated Development Environment (IDE) – combines these plus more
+* Visual Studio (multi-language)
+* Rstudio (R, some Python)
+* Rodeo (very similar look/feel to Rstudio)
+* Spyder (similar to R studio/matlab)
 * PyCharm (good for web dev, Git, support for JS, HTML/CSS etc.)
 * Jupyter notebooks (cloud- based, great for instruction and web based)
-* Rodeo (very similar look/feel to Rstudio)
 
 ## environments
 ![xkcd](https://imgs.xkcd.com/comics/python_environment.png)
@@ -36,4 +38,4 @@ Development environment (IDE) – where code is run (Console)
 Great in concept - allow you to switch between versions and packages
 * Anaconda distribution (comes with many scientific packages)
 * Conda environment management (part of anaconda & ArcGIS Pro)
-* Virtual environments
+* Virtual environments (usually set up through pip install from [PyPI](https://pypi.org/))
