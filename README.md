@@ -1,20 +1,24 @@
 # py_workgroup
 This repository contains materials for the workgroup to use while learning python.
 
-The purpose of this group is to work together to learn new skills, languages, data science practices, etc. as they relate to our research in environmental science. The primary focus will be the use of python, with excercises focused on accessing data from the web and manipulating spatial data in arcGIS desktop using arcpy. However, topics are not limited to these and you're encouraged to bring ideas and tools from other topics or languages.
+The purpose of this group is to work together to learn new skills, languages, data science practices, etc. as they relate to our research in environmental science. The primary focus will be the use of python, with exercises in jupyter focused on accessing data and manipulating it in pandas dataframes. However, topics are not limited to these and you're encouraged to bring ideas and tools from other topics or languages.
 
 # GitHub and this repository
 This repository is public and thus anyone can access the files; however, only collaborators on the repository can add or edit files. I encourage everyone to sign up for a GitHub account, they are free and you will be able to take advantage of our issues for discussions and you can be added as a collaborator on the repository.
 
+Lessons and format change from year to year, new lessons are added but old ones
+are not deleted.
+
 | Folder/File   | Description  |
 | ------------- |-------------------------------------------: |
+| lessons_2022  | Markdown and notebooks for each week.       |
 | practice      | Contains code, data etc. to apply skills.   |
 | slides        | Contains slides covering each weeks lesson. |
 | CONDUCT.md    | Code of conduct - from Data Carpentry       |
 | README.md     | This document, provides basic information.  |
 
 # Repository Structure
-To keep things neat and tiddy we will impose some structures and best practices. These should resemble typical practices where possible (e.g. README) so that if you move to repositories maintained by other, at least something should look familiar.
+To keep things neat and tiddy we will impose some structures and best practices. These should resemble typical practices where possible (e.g. README) so that if you move to repositories maintained by others, at least something should look familiar.
 
 
 # File naming conventions
