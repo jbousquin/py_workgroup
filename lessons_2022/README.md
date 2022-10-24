@@ -9,6 +9,7 @@ I will try to post recordings to the network drive (L:\Public\jbousqui\Resources
 -Lesson 1-
 
 	- Before we start (why, setup etc.)
+	- Demo: familiarize with IDEs and jupyter notebooks
 	- Built-in data types
 	- Intro to conditionals and control flow (True/False; if/else)
 	- Intro to for loops
