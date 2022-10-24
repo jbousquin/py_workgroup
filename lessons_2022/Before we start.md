@@ -1,5 +1,22 @@
 # Before we start
 
+## What is Programming and Coding?
+
+Programming is the process of writing _"programs"_ that a computer can execute and produce some
+(useful) output.
+Programming is a multi-step process that involves the following steps:
+
+1. Identifying the aspects of the real-world problem that can be solved computationally
+2. Identifying (the best) computational solution
+3. Implementing the solution in a specific computer language
+4. Testing, validating, and adjusting implemented solution.
+
+While _"Programming"_ refers to all of the above steps,
+_"Coding"_ refers to step 3 only: _"Implementing the solution in a specific computer language"_. It's
+important to note that _"the best"_ computational solution must consider factors beyond the computer.
+Who is using the program, what resources/funds does your team have for this project, and the available
+timeline all shape and mold what "best" may be.
+
 ## Why py?
 * Efficient (loop friendly)
 * Versatile (C, but can integrate C#, .net, JS, ObjectiveC etc.)
