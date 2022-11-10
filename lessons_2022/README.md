@@ -6,35 +6,40 @@ I will try to post recordings to the network drive (L:\Public\jbousqui\Resources
 
 ## Agendas
 
--Lesson 1-
+-Lesson 0-
 
 	- Before we start (why, setup etc.)
 	- Demo: IDEs
 	- Excercise 0: familiarize jupyter notebooks
+
+-Lesson 1-	
+
 	- Built-in data types
 	- Intro to conditionals and control flow (True/False; if/else)
-	- Intro to for loops
-	- Intro to functions?
-	- Exercise 1
+	- Lists
+	- Tuples
 
 -Lesson 2-
 
-	- Working with local files
+	- For loops
+        - Dictionaries
+	- Looping over dictionaries
+	- Functions
+	- Working with local files (IDLE demo, notebook demo)
 	- Packages/libraries
 	- os
 	- pandas
-	- Reading in data
-	- Exercise
+	- Reading in data 
+	- Parts of a dataframe (getting a col, datatypes)
+	- Dataframe summary stats
+	- Dataframe groupby
 
 -Lesson 3-
 
+	- Practice Excercise 1
 	- Getting specific rows/columns/data points
-	- Data types
 	- Writing data
 	- Append/Merge/Join
-
--Lesson 4-
-
 	- Revisiting loops and functions
 	- Visualization
 	- Putting it all together
