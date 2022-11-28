@@ -22,7 +22,7 @@ I will try to post recordings to the network drive (L:\Public\jbousqui\Resources
 -Lesson 2-
 
 	- For loops
-        - Dictionaries
+	- Dictionaries
 	- Looping over dictionaries
 	- Functions
 	- Working with local files (IDLE demo, notebook demo)
@@ -34,15 +34,19 @@ I will try to post recordings to the network drive (L:\Public\jbousqui\Resources
 	- Dataframe summary stats
 	- Dataframe groupby
 
+-Practice Excercise 1-
+
 -Lesson 3-
 
-	- Practice Excercise 1
+	- NaN
 	- Getting specific rows/columns/data points
 	- Writing data
 	- Append/Merge/Join
 	- Revisiting loops and functions
 	- Visualization
 	- Putting it all together
+
+-Practice Excercise 2-
 
 -Special Topics-
 
