@@ -11,7 +11,7 @@ In this exercise we will make a file accessible to our jupyter notebook, read th
 
 ### Questions (Create a metadown header cell for each and add code to solve)
 
-1) Choose a method to view a sample of the dataframe (e.g., first 5 fows, etc.)
+1) Choose a method to view a sample of the dataframe (e.g., first 5 rows, etc.)
 2) Create a list for the column names
 3) What data type does the 'plot_id' col contain?
 4) What is the value of the 'plot_id' col in the first row? The value of 'species_id' in the same same?
