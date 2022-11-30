@@ -42,6 +42,10 @@ I will try to post recordings to the network drive (L:\Public\jbousqui\Resources
 	- Getting specific rows/columns/data points
 	- Writing data
 	- Append/Merge/Join
+	
+-Practice Excercise 1-
+
+-Lesson 4-
 	- Revisiting loops and functions
 	- Visualization
 	- Putting it all together
