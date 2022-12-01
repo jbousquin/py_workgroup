@@ -16,7 +16,7 @@
 # Joining DataFrames
 
     Step 1: Read in first 10 lines of surveys table
-    Step 2: Import a small subset of the species data designed for this part of the lesson.
+    Step 2: Import a small subset of the species data (speciesSubset.csv) designed for this part of the lesson.
     Note: In this example, species_sub is the lookup table containing genus, species, and taxa names that we want to join with the data in survey_sub to produce a new DataFrame that contains all of the columns from both species_df and survey_df.
     Step 3: Identify join keys
     
